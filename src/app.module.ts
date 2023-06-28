@@ -3,9 +3,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 import { ProductModule } from './product/product.module';
 import { GraphQLModule } from '@nestjs/graphql';
-import { join } from 'path';
-import { User } from './user/user.entity';
-import { AppController } from './app.controller';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
 @Module({
