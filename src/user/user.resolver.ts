@@ -3,7 +3,7 @@ import { UserService } from './user.service';
 import { CreateUserInput } from './dto/create-user.input';
 import { User } from './user.entity';
 
-@Resolver((of) => User)
+@Resolver(() => User)
 export class UserResolver {
   constructor(private readonly userService: UserService) {}
   @Mutation(() => User)
