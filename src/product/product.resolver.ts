@@ -1,4 +1,11 @@
-import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import {
+  Resolver,
+  Query,
+  Mutation,
+  Args,
+  ResolveField,
+  Parent,
+} from '@nestjs/graphql';
 import { ProductService } from './product.service';
 import { Product } from './product.entity';
 import { UserService } from '../user/user.service';
@@ -23,5 +30,11 @@ export class ProductResolver {
   @Query(() => [Product])
   async getProducts() {
     return this.productService.findAll();
+  }
+
+  @ResolveField('price')
+  getPrice(@Parent() product: Product): string {
+    // Convert the price to a number and limit it to 2 decimal places
+    return Number(product.price).toFixed(2);
   }
 }
