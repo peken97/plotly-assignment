@@ -54,7 +54,6 @@ query {
     id,
     name,
     price,
-    userId,
     user {
       id
     }
@@ -88,11 +87,11 @@ mutation {
     id,
     name,
     price,
-    userId
     user {
       name,
       id
     }
   }
 }
+
 ```
