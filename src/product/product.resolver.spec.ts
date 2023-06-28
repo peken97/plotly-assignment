@@ -3,7 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { ProductResolver } from './product.resolver';
 import { ProductService } from './product.service';
 import { UserService } from '../user/user.service';
-import { Product } from './product.entity';
+import { Product } from './entity/product.entity';
 
 describe('ProductResolver', () => {
   let productResolver: ProductResolver;

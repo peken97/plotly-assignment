@@ -3,8 +3,8 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { ProductService } from './product.service';
 import { UserService } from '../user/user.service';
-import { Product } from './product.entity';
-import { User } from '../user/user.entity';
+import { Product } from './entity/product.entity';
+import { User } from '../user/entity/user.entity';
 
 describe('ProductService', () => {
   let productService: ProductService;
